@@ -1,0 +1,34 @@
+
+	<script>
+			var idValue = 1;
+			var idValPoint = 1;
+			$('#addPartic')
+					.click(
+							function() {
+								idValue = idValue + 1;
+								if (idValue < 11)
+									$('#myTable')
+											.append(
+													" <tr> <td><input type='number' rows='1' cols='10'  placeholder='Add Employee code' id='"+idValue+"' name='code"+idValue+"'></textarea></td> "
+															+ "<td> <select name='attendance"+idValue+"'> <option  value='present'>  present </option> "
+															+ "<option  value='absent'>  absent </option></select> </td> </tr>");
+							});
+			</script>
+			<script>
+			var idValue = 1;
+			var idValDate = 1;
+			var idValAction = 1;
+			$('#addAction').click(
+							function() {
+								idValAction = idValAction + 1;
+								if (idValAction < 6)
+									$('#actionTable')
+											.append(
+													"<tr> <td><textarea rows='1' cols='30' placeholder='Add Action items' id='ActionItem'"+idValAction+"' name='ActionItem"+idValAction+"' class='c1'></textarea></td><td><input type='number' rows='1' cols='10'  placeholder=' Add Owner ID' id='"+idValue+"' name='ownerId"+idValue+"'></textarea></td> </tr> ");
+												
+													
+									
+															
+													
+							});
+		</script>
