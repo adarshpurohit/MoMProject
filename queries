@@ -1,0 +1,1 @@
+select a.action_id, a.action_name from actions a, mom m, where m.creator_id = e.emp_id and m.mom_id = a.mom_id and a.creator_id = 1000;
