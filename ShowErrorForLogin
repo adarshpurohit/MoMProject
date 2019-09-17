@@ -9,7 +9,7 @@
 		else {
 			HttpSession hp=request.getSession();
 			
-			hp.setAttribute("error","Invalid UserID/Password");
+			hp.setAttribute("error","Invalid Email/Password");
 			hp.setMaxInactiveInterval(5);
 			request.setAttribute("loginResult", "true");
 
