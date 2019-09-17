@@ -1,0 +1,17 @@
+<c:set var="isValid" scope="session" value="${isValidPar}" />
+						<c:if test="${isValid!=null}">
+							<c:out value="${isValid}"></c:out>
+							<%
+								session.setAttribute("isValidPar", null);
+							%>
+						</c:if>
+            
+            if(!sp)
+			{
+				
+				
+					HttpSession hp=request.getSession();
+					hp.setAttribute("isValidPar", "Not a Valid Employee code");
+					
+					
+			}
