@@ -1,0 +1,18 @@
+<span id='error'> 
+    <%if(session.getAttribute("error")!=null){
+	    				String str=(String)session.getAttribute("error");
+	    				
+	    				out.println(str);}%></span>
+              
+              
+              
+		else {
+			HttpSession hp=request.getSession();
+			
+			hp.setAttribute("error","Invalid UserID/Password");
+			hp.setMaxInactiveInterval(5);
+			request.setAttribute("loginResult", "true");
+
+			RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+			rd.include(request, response);
+		}
